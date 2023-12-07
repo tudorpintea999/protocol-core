@@ -10,7 +10,7 @@ withdrawCollateralTest.t.sol
         └── when caller is owner or relied upon by owner
             ├── when the amount to burn is less than or equal to the owner's borrowed amount
             │   ├── it should accrue fees
-            │   ├── it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+            │   ├── it should emit CurrencyBurned() event with expected indexed and unindexed parameters
             │   ├── it should update the owner's borrowed amount, collateral borrowed amount and global debt 
             │   ├── it should pay back part of or all of the borrowed amount
             │   └── it should not pay any accrued fees
@@ -19,7 +19,7 @@ withdrawCollateralTest.t.sol
                 │   └── it should revert with underflow error
                 └── when the amount to burn is NOT greater than the owner's borrowed amount and accrued fees
                     ├── it should accrue fees
-                    ├── it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+                    ├── it should emit CurrencyBurned() event with expected indexed and unindexed parameters
                     ├── it should update the owner's borrowed amount, collateral borrowed amount and global debt 
                     ├── it should pay off ALL borrowed amount
                     ├── it should emit FeesPaid() event with with expected indexed and unindexed parameters
