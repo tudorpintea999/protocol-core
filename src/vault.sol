@@ -364,8 +364,8 @@ contract Vault is AccessControl, Pausable, IVault {
      * @param _to address to send the minted/borrowed currency to
      * @param _amount amount of currency to mint
      *
-     * @dev if the users currencly minted/borrwed amount if greater than 0, it should update fees accrued for `_owner`'s vault since last fee update, this is important as it ensures that the collateral-ratio check at the end of the function uses an updated total owed amount i.e (borrowedAmount + accruedFees) when checking `_owner`'s collateral-ratio
-     *      else i.e when currenctly minted/borrwed amount is 0 (this means that no past fees to accrue), it should set the `lastTotalAccumulatedRate` of the vault to be the current totalAccumulatedRate (i.e current accumulated base rate + current accumulated collateral rate, emphaisis on current as these values are recalculated for both rates to their current values)
+     * @dev if the users currently minted/borrwed amount if greater than 0, it should update fees accrued for `_owner`'s vault since last fee update, this is important as it ensures that the collateral-ratio check at the end of the function uses an updated total owed amount i.e (borrowedAmount + accruedFees) when checking `_owner`'s collateral-ratio
+     *      else i.e when currently minted/borrwed amount is 0 (this means that no past fees to accrue), it should set the `lastTotalAccumulatedRate` of the vault to be the current totalAccumulatedRate (i.e current accumulated base rate + current accumulated collateral rate, emphaisis on current as these values are recalculated for both rates to their current values)
      * @dev should revert if the contract is paused
      *      should revert if the collateral does not exist
      *      should revert if the caller is not the `_owner` and not also not relied upon
@@ -427,7 +427,7 @@ contract Vault is AccessControl, Pausable, IVault {
     /**
      * @notice liquidates a vault making sure the liquidation strictly improves the collateral ratio i.e doesn't leave it the same as before or decreases it (if that's possible)
      *
-     * @param _collateralToken contract address of collateral used by vault that is to be liquidate, also the token to recieved by the `_to` address after liquidation
+     * @param _collateralToken contract address of collateral used by vault that is to be liquidated, also the token to received by the `_to` address after liquidation
      * @param _owner owner of the vault to liquidate
      * @param _to address to send the liquidated collateral (collateral covered) to
      * @param _currencyAmountToPay the amount of currency tokens to pay back for `_owner`
@@ -436,7 +436,7 @@ contract Vault is AccessControl, Pausable, IVault {
      * @dev should revert if the contract is paused
      *      should revert if the collateral does not exist
      *      should revert if the vault is not under-water
-     *      should revert if liqudiation did not strictly imporve the collateral ratio of the vault
+     *      should revert if liquidation did not strictly improve the collateral ratio of the vault
      */
     function liquidate(ERC20 _collateralToken, address _owner, address _to, uint256 _currencyAmountToPay)
         external
