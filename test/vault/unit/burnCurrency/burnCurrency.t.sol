@@ -71,7 +71,7 @@ contract BurnCurrencyTest is BaseTest {
         useUser1
     {
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay back part of or all of the borrowed amount
         // it should update the owner's accrued fees, collateral accrued fees and paid fees and global accrued fees and paid fees
@@ -88,7 +88,7 @@ contract BurnCurrencyTest is BaseTest {
         useUser1
     {
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay back part of or all of the borrowed amount
         // it should update the owner's accrued fees, collateral accrued fees and paid fees and global accrued fees and paid fees
@@ -105,7 +105,7 @@ contract BurnCurrencyTest is BaseTest {
         useReliedOnForUser1(user2)
     {
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay back part of or all of the borrowed amount
         // it should update the owner's accrued fees, collateral accrued fees and paid fees and global accrued fees and paid fees
@@ -122,7 +122,7 @@ contract BurnCurrencyTest is BaseTest {
         useReliedOnForUser1(user2)
     {
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay back part of or all of the borrowed amount
         // it should update the owner's accrued fees, collateral accrued fees and paid fees and global accrued fees and paid fees
@@ -236,11 +236,11 @@ contract BurnCurrencyTest is BaseTest {
         vm.startPrank(user1);
 
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay off ALL borrowed amount
         // it should update the paid fees and global accrued fees and paid fees
-        // it should pay pay back part of or all of the accrued fees
+        // it should pay back part of or all of the accrued fees
 
         // skip time to make accrued fees and paid fees test be effective
         skip(1_000);
@@ -275,11 +275,11 @@ contract BurnCurrencyTest is BaseTest {
         vm.startPrank(user1);
 
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay off ALL borrowed amount
         // it should update the paid fees and global accrued fees and paid fees
-        // it should pay pay back part of or all of the accrued fees
+        // it should pay back part of or all of the accrued fees
 
         // skip time to make accrued fees and paid fees test be effective
         skip(1_000);
@@ -314,11 +314,11 @@ contract BurnCurrencyTest is BaseTest {
         vm.startPrank(user2);
 
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay off ALL borrowed amount
         // it should update the paid fees and global accrued fees and paid fees
-        // it should pay pay back part of or all of the accrued fees
+        // it should pay back part of or all of the accrued fees
 
         // skip time to make accrued fees and paid fees test be effective
         skip(1_000);
@@ -354,11 +354,11 @@ contract BurnCurrencyTest is BaseTest {
         vm.startPrank(user2);
 
         // it should accrue fees
-        // it should emit CurrencyBurned() event with with expected indexed and unindexed parameters
+        // it should emit CurrencyBurned() event with expected indexed and unindexed parameters
         // it should update the owner's borrowed amount, collateral borrowed amount and global debt
         // it should pay off ALL borrowed amount
         // it should update the paid fees and global accrued fees and paid fees
-        // it should pay pay back part of or all of the accrued fees
+        // it should pay back part of or all of the accrued fees
 
         // skip time to make accrued fees and paid fees test be effective
         skip(1_000);
